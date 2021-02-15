@@ -2,8 +2,7 @@ from django.http import HttpResponse
 
 
 
-def homePage(request):
-    return HttpResponse('Hello')
+
 
 def showProfile(request):
     return HttpResponse('This is the user profile')

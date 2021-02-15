@@ -18,9 +18,10 @@ from django.urls import path
 
 from webapp.users import profile
 from webapp.users import friends
+from webapp.pages import home
 
 urlpatterns = [
-    path('', profile.homePage),
+    path('', home.homePage),
     path('user/profile', profile.showProfile),
     path('user/profile/edit', profile.editProfile),
     path('user/profile/delete', profile.deleteProfile),
