@@ -19,13 +19,14 @@ from django.urls import path
 from webapp.users import profile
 from webapp.users import friends
 from webapp.pages import home
-
+from webapp.pages import contacts
 urlpatterns = [
     path('', home.index),
-    path('user/profile', profile.showProfile),
-    path('user/profile/edit', profile.editProfile),
-    path('user/profile/delete', profile.deleteProfile),
-    path('user/friends', friends.showFriendsList),
-    path('user/friends/add', friends.addFriend),
-    path('user/friends/remove', friends.removeFriend)
+    path('contacts', contacts.index),
+    path('user/profiles', profile.showProfileList),
+    # path('user/profile/edit', profile.editProfile),
+    # path('user/profile/delete', profile.deleteProfile),
+    # path('user/friends', friends.showFriendsList),
+    # path('user/friends/add', friends.addFriend),
+    # path('user/friends/remove', friends.removeFriend)
 ]
