@@ -21,7 +21,7 @@ from webapp.users import friends
 from webapp.pages import home
 
 urlpatterns = [
-    path('', home.homePage),
+    path('', home.index),
     path('user/profile', profile.showProfile),
     path('user/profile/edit', profile.editProfile),
     path('user/profile/delete', profile.deleteProfile),
