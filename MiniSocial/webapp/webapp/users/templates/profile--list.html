@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>The list of AzuskySocial profiles</h1>
-    {% for name in profiles%}
-        {{ name }}
+    {% for user in profiles%}
+        {{ user.username }}
     {% endfor %}
-
+    <a href='/'>Homepages</a>
 
 
 </body>

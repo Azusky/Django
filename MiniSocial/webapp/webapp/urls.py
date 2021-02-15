@@ -20,6 +20,7 @@ from webapp.users import profile
 from webapp.users import friends
 from webapp.pages import home
 from webapp.pages import contacts
+
 urlpatterns = [
     path('', home.index),
     path('contacts', contacts.index),
