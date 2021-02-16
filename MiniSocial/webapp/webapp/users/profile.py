@@ -18,9 +18,9 @@ def loginForm(request):
 
 def loginDone(request):
     usernameLogin = request.GET['username']
-    passwordPass = request.GET['password']
+    passwordLogin = request.GET['password']
     for user in usersList:
-        if user.username == usernameLogin and user.password == passwordPass:
+        if user.username == usernameLogin and user.password == passwordLogin:
             print(user.password)
             user.online = True
         else:
