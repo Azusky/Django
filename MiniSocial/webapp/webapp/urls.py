@@ -27,8 +27,9 @@ urlpatterns = [
     path('users/profiles', profile.showProfileList),
     path('users/profiles/create', profile.createProfile),
     path('users/profiles/save', profile.saveProfile),
+    path('users/profiles/delete', profile.deleteProfile),
     # path('user/profile/edit', profile.editProfile),
-    # path('user/profile/delete', profile.deleteProfile),
+
     # path('user/friends', friends.showFriendsList),
     # path('user/friends/add', friends.addFriend),
     # path('user/friends/remove', friends.removeFriend)

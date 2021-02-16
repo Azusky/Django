@@ -13,7 +13,7 @@ def showProfileList(request):
     template = loader.get_template(
             'users/templates/profile--list.html'
             )
-    return HttpResponse(template.render({'profiles': usersList,}, request))
+    return HttpResponse(template.render({'profiles': enumerate(usersList, start=0)}, request))
 
 def createProfile(request):
     template = loader.get_template(
@@ -37,4 +37,6 @@ def editProfile(request):
     return HttpResponse('editing profile')
 
 def deleteProfile(request):
+    index = int(request.GET['index'])
+    usersList.pop(index)
     return HttpResponse('deleting profile')
