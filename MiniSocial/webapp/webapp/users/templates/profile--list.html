@@ -9,7 +9,7 @@
 <body>
     <h1>The list of AzuskySocial profiles</h1>
     {% for index, user in profiles%}
-        {{ user.username }}  ({{user.email}})
+        {{ user.username }}  ({{user.email}}) {{user.online}}
         <a href="/users/profiles/delete?index={{index}}">x</a><br/>
     {% endfor %}
     <a href='/'>Homepages</a>

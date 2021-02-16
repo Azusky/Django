@@ -9,6 +9,23 @@ usersList = [
     User("Petter", "p@example.com", "3.png", "qwerty3")
 ]
 
+
+def loginForm(request):
+    template = loader.get_template(
+            'users/templates/profile--login.html'
+            )
+    return HttpResponse(template.render({}, request))
+
+def loginDone(request):
+    username = request.GET['username']
+    password = request.GET['password']
+    for user in usersList:
+        if user.username and user.password in usersList:
+            user.online = True
+    return HttpResponse('Hello')
+
+
+
 def showProfileList(request):
     template = loader.get_template(
             'users/templates/profile--list.html'
@@ -19,7 +36,7 @@ def createProfile(request):
     template = loader.get_template(
             'users/templates/profile--create.html'
             )
-    return HttpResponse(template.render({'profiles': usersList,}, request))
+    return HttpResponse(template.render({'profiles': usersList}, request))
 
 
 def saveProfile(request):
