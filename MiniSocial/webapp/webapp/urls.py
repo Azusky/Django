@@ -24,9 +24,9 @@ from webapp.pages import contacts
 urlpatterns = [
     path('', home.index),
     path('contacts', contacts.index),
-    path('user/profiles', profile.showProfileList),
-    path('user/profiles/create', profile.createProfile),
-    path('user/profiles/save', profile.saveProfile),
+    path('users/profiles', profile.showProfileList),
+    path('users/profiles/create', profile.createProfile),
+    path('users/profiles/save', profile.saveProfile),
     # path('user/profile/edit', profile.editProfile),
     # path('user/profile/delete', profile.deleteProfile),
     # path('user/friends', friends.showFriendsList),

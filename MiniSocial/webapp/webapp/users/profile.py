@@ -23,7 +23,11 @@ def createProfile(request):
 
 
 def saveProfile(request):
+    username = request.GET['username']
+    email = request.GET['email']
+    password = request.GET['password']
 
+    usersList.append(User(username, email,'', password))
     return HttpResponse("Your account has been saved")
 
 def showProfile(request):
