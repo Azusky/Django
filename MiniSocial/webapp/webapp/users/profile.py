@@ -15,6 +15,16 @@ def showProfileList(request):
             )
     return HttpResponse(template.render({'profiles': usersList,}, request))
 
+def createProfile(request):
+    template = loader.get_template(
+            'users/templates/profile--create.html'
+            )
+    return HttpResponse(template.render({'profiles': usersList,}, request))
+
+
+def saveProfile(request):
+
+    return HttpResponse("Your account has been saved")
 
 def showProfile(request):
     return HttpResponse('This is the user profile')

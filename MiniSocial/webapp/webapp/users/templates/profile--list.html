@@ -9,7 +9,7 @@
 <body>
     <h1>The list of AzuskySocial profiles</h1>
     {% for user in profiles%}
-        {{ user.username }}
+        {{ user.username }}  ({{user.email}}),<br/>
     {% endfor %}
     <a href='/'>Homepages</a>
 
