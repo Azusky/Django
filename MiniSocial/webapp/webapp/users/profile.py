@@ -17,12 +17,15 @@ def loginForm(request):
     return HttpResponse(template.render({}, request))
 
 def loginDone(request):
-    username = request.GET['username']
-    password = request.GET['password']
+    usernameLogin = request.GET['username']
+    passwordPass = request.GET['password']
     for user in usersList:
-        if user.username and user.password in usersList:
+        if user.username == usernameLogin and user.password == passwordPass:
+            print(user.password)
             user.online = True
-    return HttpResponse('Hello')
+        else:
+            user.online = False
+    return HttpResponse('Hello!!!')
 
 
 
