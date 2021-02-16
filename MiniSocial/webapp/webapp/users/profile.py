@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
-from users.user import User
+from webapp.users.user import User
 
 
 usersList = [

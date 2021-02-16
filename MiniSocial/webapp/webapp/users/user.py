@@ -1,4 +1,6 @@
 
+
+
 class User():
     def __init__(self, username, email, avatar, password):
         self.username = username
